@@ -15,6 +15,7 @@ const Tienda = ({guitarras}) => {
           guitarras= {guitarras}
         />
       </main>
+
     </Layout>
   )
 }

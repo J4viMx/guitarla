@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({children, pagina}) => {
+const Layout = ({children, pagina, guitarra}) => {
   return (
     <div>
         <Head>
@@ -12,7 +12,9 @@ const Layout = ({children, pagina}) => {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
             <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"/>
         </Head>
-        <Header/>
+        <Header
+          guitarra = {guitarra}
+        />
 
         {children}
 
@@ -20,6 +22,10 @@ const Layout = ({children, pagina}) => {
 
     </div>
   )
+}
+
+Layout.defaultProps = {
+  guitarra: null
 }
 
 export default Layout
